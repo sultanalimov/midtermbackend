@@ -14,7 +14,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.example.demo.model.Employee;
+import com.example.demo.entity.Employee;
 import com.example.demo.repo.EmployeeRepo;
 import com.example.demo.service.EmployeeService;
 
@@ -33,7 +33,7 @@ public class EmployeeServiceIntegrationTest {
     void setUp() {
         mockEmployee = new Employee();
         mockEmployee.setId(1L);
-        mockEmployee.setName("Nureles");
+        mockEmployee.setName("Sultan");
         mockEmployee.setJobTitle("web-developer");
     }
 

@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.example.demo.controller;
 
-import com.example.demo.model.Employee;
+import com.example.demo.entity.Employee;
 import com.example.demo.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +11,9 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/employee")
-public class EmployeeResource {
+public class EmployeController {
     private final EmployeeService employeeService;
-    public EmployeeResource(EmployeeService employeeService) {
+    public EmployeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
     @GetMapping("/all")

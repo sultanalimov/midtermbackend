@@ -1,27 +1,27 @@
-package com.example.demo.model;
+package com.example.demo.dto;
 
+public class EmployeeDTO {
+    private Long id;
+    private String name;
+    private String email;
+    private String jobTitle;
+    private String phone;
+    private String imageUrl;
+    private String employeeCode;
 
-import javax.persistence.*;
-import java.io.Serializable;
-@Entity
-public class Employee implements Serializable {
+    // Constructors
+    public EmployeeDTO() {
+    }
 
-
-    public Employee() {}
-
-    public Employee(
-            String name,
-            String email,
-            String jobTitle,
-            String phone,
-            String imageUrl) {
+    public EmployeeDTO(Long id,  String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.jobTitle = jobTitle;
         this.phone = phone;
         this.imageUrl = imageUrl;
+        this.employeeCode = employeeCode;
     }
-
 
     public Long getId() {
         return id;
@@ -34,17 +34,7 @@ public class Employee implements Serializable {
     public String getName() {
         return name;
     }
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false,updatable = false)
-    private Long id;
-    private String name;
-    private String email;
-    private String jobTitle;
-    private String phone;
-    private String imageUrl;
-    @Column(nullable = false,updatable = false)
-    private String employeeCode;
+
     public void setName(String name) {
         this.name = name;
     }
@@ -89,9 +79,10 @@ public class Employee implements Serializable {
         this.employeeCode = employeeCode;
     }
 
+    // toString method
     @Override
     public String toString() {
-        return "Employee{" +
+        return "EmployeeDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
@@ -101,5 +92,4 @@ public class Employee implements Serializable {
                 ", employeeCode='" + employeeCode + '\'' +
                 '}';
     }
-
 }
