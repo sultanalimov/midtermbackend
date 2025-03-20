@@ -1,6 +1,7 @@
 package com.example.demo;
 
-import com.example.demo.model.Employee;
+import com.example.demo.controller.EmployeController;
+import com.example.demo.entity.Employee;
 import com.example.demo.service.EmployeeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-public class EmployeeResourceTest {
+public class EmployeeControllerTest {
 
     private MockMvc mockMvc;
 
@@ -27,7 +28,7 @@ public class EmployeeResourceTest {
     private EmployeeService employeeService;
 
     @InjectMocks
-    private EmployeeResource employeeResource;
+    private EmployeController employeeResource;
 
     @BeforeEach
     public void setup() {

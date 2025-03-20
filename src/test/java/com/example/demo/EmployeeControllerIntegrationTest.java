@@ -6,6 +6,7 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.controller.EmployeController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,17 +16,17 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.demo.model.Employee;
+import com.example.demo.entity.Employee;
 import com.example.demo.service.EmployeeService;
 
 @ExtendWith(MockitoExtension.class)
-public class EmployeeResourceIntegrationTest {
+public class EmployeeControllerIntegrationTest {
 
     @Mock
     private EmployeeService employeeService;
 
     @InjectMocks
-    private EmployeeResource employeeResource;
+    private EmployeController employeeResource;
 
     private Employee mockEmployee;
 
