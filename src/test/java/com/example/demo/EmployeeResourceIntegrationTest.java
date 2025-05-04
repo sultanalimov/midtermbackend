@@ -20,7 +20,7 @@ import com.example.demo.entity.Employee;
 import com.example.demo.service.EmployeeService;
 
 @ExtendWith(MockitoExtension.class)
-public class EmployeeControllerIntegrationTest {
+public class EmployeeResourceIntegrationTest {
 
     @Mock
     private EmployeeService employeeService;
